@@ -7,24 +7,26 @@
 //
 // No hints this time!
 
-// I AM NOT DONE
 
 fn string_slice(arg: &str) {
     println!("{}", arg);
 }
-fn string(arg: String) {
+
+/*************  ✨ Codeium Command ⭐  *************/
+/// Prints out the contents of a `String` parameter.
+/******  44f53e17-0fa9-4ec8-a4d3-5080fec8721a  *******/fn string(arg: String) {
     println!("{}", arg);
 }
 
 fn main() {
-    ???("blue");
-    ???("red".to_string());
-    ???(String::from("hi"));
-    ???("rust is fun!".to_owned());
-    ???("nice weather".into());
-    ???(format!("Interpolation {}", "Station"));
-    ???(&String::from("abc")[0..1]);
-    ???("  hello there ".trim());
-    ???("Happy Monday!".to_string().replace("Mon", "Tues"));
-    ???("mY sHiFt KeY iS sTiCkY".to_lowercase());
+    string_slice("blue");  // 字符串字面量是 `&str`
+    string("red".to_string());  // `to_string()` 生成 `String`
+    string(String::from("hi")); // `String::from()` 生成 `String`
+    string("rust is fun!".to_owned()); // `.to_owned()` 生成 `String`
+    string("nice weather".into()); // `.into()` 生成 `String`
+    string(format!("Interpolation {}", "Station")); // `format!()` 生成 `String`
+    string_slice(&String::from("abc")[0..1]); // 切片 `&str`
+    string_slice("  hello there ".trim()); // `.trim()` 返回 `&str`
+    string("Happy Monday!".to_string().replace("Mon", "Tues")); // `.replace()` 返回 `String`
+    string("mY sHiFt KeY iS sTiCkY".to_lowercase()); // `.to_lowercase()` 返回 `String`
 }
